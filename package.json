@@ -1,0 +1,63 @@
+{
+  "name": "cp1",
+  "version": "1.0.0",
+  "description": " News API",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test: coverage": "jest --coverage",
+    "elint": "eslint . — ext .js — ext .jsx — cache || true",
+    "elint:table": "eslint . — ext .js — ext .jsx — cache — format table || true",
+    "elint:summary": "eslint . — ext .js — ext .jsx — cache — format ‘node_modules/eslint-friendly-formatter’ || true"
+  },
+  "jest": {
+    "SetupEnv": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializer": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flux": "^3.1.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react-es2015": "^1.2.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^19.0.1",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^19.0.2",
+    "path": "^0.12.7",
+    "react-addons-test-utils": "^15.5.1",
+    "webpack": "^2.4.1"
+  }
+}
