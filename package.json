@@ -13,10 +13,10 @@
     "elint:summary": "eslint . — ext .js — ext .jsx — cache — format ‘node_modules/eslint-friendly-formatter’ || true"
   },
   "jest": {
-    "SetupEnv": [
-      "./test/jestsetup.js"
+    "setupFiles": [
+      "./__tests__/jestsetup"
     ],
-    "snapshotSerializer": [
+    "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
@@ -30,6 +30,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "expect": "^1.20.2",
     "flux": "^3.1.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -54,10 +55,14 @@
     "eslint-plugin-jest": "^19.0.1",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "expect": "^1.20.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^19.0.2",
     "path": "^0.12.7",
+    "react": "^15.5.4",
     "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
     "webpack": "^2.4.1"
   }
 }
