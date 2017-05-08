@@ -5,9 +5,9 @@ import shallowToJSON from 'enzyme-to-json';
 import Header from '../src/js/components/app';
 
 describe('News API', () => {
-  it('the app should have a logo and image', () => {
+  it('the app should have a image', () => {
     const app = shallow(<newsAPI />);
-    expect(app.contains(<div>App</div>)).toBe(false);
+    expect(app.contains(<div>NewsAPI</div>)).toBe(true);
   });
 });
 
