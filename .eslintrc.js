@@ -47,6 +47,7 @@ module.exports = {
     "no-unused-expressions": "warn",
     "no-useless-concat": "warn",
     "block-scoped-var": "error",
-    "consistent-return": "error"
+    "consistent-return": "error",
+    "prop-types": [<enabled/>, { ignore: <ignore/>, customValidators: <customValidator/> }]
   }
 };
