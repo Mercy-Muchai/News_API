@@ -6,14 +6,8 @@ export default class Logo extends React.Component {
     return (
       <div>
         <img src={require("../newsicon.png")} />
-        <h1> {this.props.name} </h1>
+        <h1>Top News</h1>
       </div>
     )
   }
 }
-
-ReactDOM.render(
-  <Logo
-    name='TOP NEWS'/>,
-  document.getElementById('app')
-);
