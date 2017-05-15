@@ -24,7 +24,9 @@ render() {
       <div>
         <h1>Articles</h1>
         {this.state.articles.map((articles) => (
-          <div>{articles.author}</div>
+          <div>{articles.title}
+            {articles.description}
+          </div>
         ))
         }
       </div>
