@@ -34,7 +34,17 @@ export default class Sources extends Component {
         <h1>Sources</h1>
         {this.state.sources.map((sources) => (
           <div>
-            {sources.name}
+             <div>
+            <div className="card col-xs-20 col-sm-10 col-md-2 m-2" key={sources.id}>
+              <div className="card-block">
+                <h4 className="card-title"> <a href = {sources.url} >{sources.name}</a></h4>
+                {/*<p className="card-text">{articles.description}</p>*/}
+              </div>
+            </div>
+
+          </div>
+
+           
 
             {/*{sources.description}*/}
 

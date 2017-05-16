@@ -5,8 +5,8 @@ export default class Logo extends React.Component {
   render() {
     return (
       <div>
-        <img src={require("../newsicon.png")} />
-        <h1>Top News</h1>
+        <img src={require("../newsicon.png")} alt="Cinque Terre" width="80" height="80"/>
+        <h1>HOT NEWS</h1>
       </div>
     )
   }
