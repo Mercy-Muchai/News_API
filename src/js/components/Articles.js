@@ -27,7 +27,7 @@ export default class Articles extends Component {
           <div>
             <div className="card col-xs-12 col-sm-6 col-md-4 m-2" key={articles.id}>
               <div className="card-block">
-                <h4 className="card-title"> <a href={articles.url}> <img class="card-img-top" src={articles.urlToImage} alt="Cinque Terre" width="400" height="236" />{articles.title}</a></h4>
+                <h4 className="card-title"> <a target="_blank" href={articles.url} target> <img class="card-img-top" src={articles.urlToImage} alt="Cinque Terre" width="400" height="236" />{articles.title}</a></h4>
                 <p className="card-text">{articles.description}</p>
               </div>
             </div>
