@@ -4,20 +4,20 @@ import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory
 import Sources from './Sources';
 import Header from './Header';
 import Articles from './Articles';
-import Login from './Login';
+// import Login from './Login';
 // import Search from './Search';
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />  <Login />
+        <Header />
         <Sources />
         <Articles />
         {/*<Search />*/}
 
 
-    </div>
+      </div>
     )
   }
 };
