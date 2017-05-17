@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Login from './Login';
 
 export default class Logo extends React.Component {
   render() {
     return (
-      <div>
-        <span><img src={require("../newsicon.png")} alt="Cinque Terre" width="80" height="80"/>
-        <h1>HOT NEWS</h1>
-        </span>
-      </div>
+      <nav>
+        <div class="nav-wrapper">
+          <h1> <img src={require("../newsicon.png")} alt="Cinque Terre" width="60" height="60" />GET NEWS</h1>
+          <div style={{ textAlign: "right", height: "50"}}>
+            <Login />
+          </div>
+        </div>
+      </nav>
     )
   }
 }
