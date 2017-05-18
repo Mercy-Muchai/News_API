@@ -15,9 +15,19 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      {test: /\.(jpe?g|png|gif|svg)$/i, use: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.jsx$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
           {
             loader: 'file-loader',
             options: {
@@ -42,8 +52,9 @@ module.exports = {
               }
             }
           }]
+      },
+      { test: /\.(scss|css)$/, loader: ['style-loader', 'css-loader', 'sass-loader'] }
+    ]
   },
-  {test: /\.(scss$|css$)/, loader:['style-loader', 'css-loader', 'sass-loader']}
-    ]},
   plugins: [HtmlWebpackPluginConfig]
 };
