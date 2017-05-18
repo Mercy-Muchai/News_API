@@ -7,7 +7,7 @@ export default class SourcesSearch extends React.Component {
     super();
     this.state = {
       sources: [],
-      search: ''
+      search: 'Search Source'
     };
   }
   updateSearch(event) {
@@ -15,14 +15,14 @@ export default class SourcesSearch extends React.Component {
 
   }
 
-  // componentDidMount() {
-  //   axios.get(`https://newsapi.org/v1/sources?language=en`)
-  //     .then((result) => {
-  //       this.setState({
-  //         sources: result.data.sources
-  //       });
-  //     });
-  // }
+  componentDidMount() {
+    axios.get(`https://newsapi.org/v1/sources?language=en`)
+      .then((result) => {
+        this.setState({
+          sources: result.data.sources
+        });
+      });
+  }
 
   render() {
     let found = this.state.sources.filter(
@@ -32,9 +32,9 @@ export default class SourcesSearch extends React.Component {
       });
 
     return (
-      <div className="col-md-2" id="search" style={{textAlign: 'right'}}>
+      <div className="col-md-2" classID="search" style={{paddingLeft: '1150px'}}>
 
-        <input type="text" placeholder='Source Name' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#d9d9d9' }} className="searchbox" />
+        <input type="text" placeholder='Search Source' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#ffffff' }} className="searchbox" />
 
         {found.map((sources) => {
 

@@ -103,13 +103,13 @@ export default class Sources extends React.Component {
             </option>
           ))}
         </select>
-          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" style={{width: '256px', height: '1800px', backgroundColor: '#ff8f88', fontWeight: 'bold'}}>
+          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" id="sourceBar">
           {sourcesToDisplay.map(source => {
             const url = "#/" + source.id + "/" + 'top'
             return (
             <div key={source.id}>
               <div className="sources">
-                <p><a href={url} >{source.name}</a>{source.articles}</p>
+                <p><a href={source.url} >{source.name}</a>{source.articles}</p>
               </div>
             </div>
           )

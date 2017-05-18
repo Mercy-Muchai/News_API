@@ -22,26 +22,31 @@ img {
   height: 60;
   align-items: center
 }
-// nav .login {
-//   margin: 10;
-//   text-align: right;
-//   color: red;
-// }
+
 google-login {
   height: 5px;
 }
+#sourceBar {
+  width: 256px;
+  height: 1900px;
+  background-color: #ff8f88;
+  font-weight: bold;
+  padding-top: 20px
+}
 
-// col-xs-12 col-sm-6 col-md-4 m-2 .card-img-top {
-//   margin: 5;
-//   text-align: center
-
-// // }
 .sources {
   text-align: left;
   text-transform: uppercase;
   font-size: 20;
   padding-left: 300
   
+}
+#articleDisplay {
+  min-height: 300px
+}
+#search {
+  padding-left: 1150px;
+
 }
 img {
   src: ("/Users/mercymuchai/Desktop/CHECKPOINT 1/cp1/src/css/img/googleplus.png");
