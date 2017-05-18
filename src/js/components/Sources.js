@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 
 const FILTERS = {
-  country: {
-    au: 'au',
-    de: 'de',
-    us: 'us'
-  },
   language: {
+    au: 'au',
     en: 'en',
-    de: 'de',
     fr: 'fr'
   },
   category: {
@@ -26,51 +21,53 @@ const FILTERS = {
   }
 };
 
-export default class Sources extends Component {
+export default class Sources extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sources: {
-        sources: []
-      },
+      sources: [],
       articles: [],
       currentFilter: {
-        filterKey: 'language',
-        filterValue: 'en',
+        filterKey: 'category',
+        filterValue: 'sport',
       },
       filters: FILTERS
     };
     this.handleFilterChange = this.handleFilterChange.bind(this);
   }
   componentDidMount() {
-    Axios
-      .get('https://newsapi.org/v1/sources?')
+    this.filterArticles ()
+  }
+  filterArticles() {
+    const filterKey = this.state.currentFilter.filterKey
+    const filterValue = this.state.currentFilter.filterValue
+    const getArticles = `https://newsapi.org/v1/sources?${filterKey}=${filterValue}`
+    Axios.get(getArticles)
       .then(({ data }) => {
-        this.setState((prevState) => ({
-          sources: data
-        }));
+        this.setState((prevState) => (Object.assign({}, prevState, { sources: data.sources })
+        ));
       });
   }
 
   handleFilterChange(event) {
     const { name, value } = event.target;
-
+    var setFilter = () => {
+      this.filterArticles();
+    }
     this.setState((prevState) => {
       const newFilter = Object.assign({}, prevState.currentFilter, {
         [name]: value
       });
-      return Object.assign({}, prevState, {
-        currentFilter: newFilter
-      });
-    });
+      return Object.assign({}, prevState, { currentFilter: newFilter });
+    }, setFilter);
   }
 
   render() {
     const {
             filters,
-      sources: { sources },
+      sources,
       currentFilter: {
-                filterKey,
+        filterKey,
         filterValue
             }
         } = this.state;
@@ -80,10 +77,11 @@ export default class Sources extends Component {
     });
 
     return (
-      <div className="container">
+      <div style={{width: '256px'}}>
         <select
           className="form-control c-select mb-2"
           name="filterKey"
+          style={{textAlign: 'left'}}
           onChange={this.handleFilterChange}
           defaultValue={filterKey}
         >
@@ -97,24 +95,27 @@ export default class Sources extends Component {
           className="form-control c-select"
           name="filterValue"
           onChange={this.handleFilterChange}
-          defaultValue={filterValue}>
+          defaultValue={filterValue}
+        >
           {Object.keys(filters[filterKey]).map(key => (
             <option key={key} value={key}>
               {key}
             </option>
           ))}
         </select>
-        <div className="row">
-          {sourcesToDisplay.map(source => (
-            <div className="card col-xs-12 col-sm-6 col-md-4 m-2" key={source.id}>
-              <div className="card-block">
-                <h4 className="card-title"><a target="_blank" href={source.url} >{source.name}</a></h4>
-                <p className="card-text">{source.description}</p>
+          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" style={{width: '256px', height: '1800px'}}>
+          {sourcesToDisplay.map(source => {
+            const url = "#/" + source.id + "/" + 'top'
+            return (
+            <div key={source.id}>
+              <div className="sources">
+                <p><a href={url} >{source.name}</a>{source.articles}</p>
               </div>
             </div>
-          ))}
+          )
+          })}
         </div>
-      </div >
+        </div>
     );
   }
 }

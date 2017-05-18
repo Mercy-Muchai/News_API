@@ -1,9 +1,48 @@
 body {
-  background-color: black,
+  padding-top:100px;
+
 }
-h1 {
+#header {
   text-align: left;
-  height: 50;
+  height: 30;
   font-weight: bold;
-  text-transform: uppercase
+  text-transform: uppercase;
+  margin: 0;
+}
+.row h1 {
+  text-align: center;
+  height: 30;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+img {
+  src: ("./js/newsicon.png");
+  width: 60;
+  height: 60;
+  align-items: center
+}
+// nav .login {
+//   margin: 10;
+//   text-align: right;
+//   color: red;
+// }
+google-login {
+  height: 5px;
+}
+
+// col-xs-12 col-sm-6 col-md-4 m-2 .card-img-top {
+//   margin: 5;
+//   text-align: center
+
+// // }
+.sources {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 20;
+  padding-left: 300
+  
+}
+img {
+  src: ("/Users/mercymuchai/Desktop/CHECKPOINT 1/cp1/src/css/img/googleplus.png");
 }

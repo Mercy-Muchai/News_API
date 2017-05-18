@@ -4,17 +4,20 @@ import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory
 import Sources from './Sources';
 import Header from './Header';
 import Articles from './Articles';
-// import Login from './Login';
-// import Search from './Search';
+import Login from './Login';
+import Search from './Search';
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
+        <Search />
         <Sources />
         <Articles />
-        {/*<Search />*/}
+        {console.log('Children: ', this.props.children)}
+        {this.props.children}
+
 
 
       </div>

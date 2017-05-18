@@ -1,66 +1,53 @@
 import React from 'react';
-import AutoSuggest from 'react-autosuggest';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
 
-const languages = [{
-
-}];
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
-
-  return inputLength === 0 ? [] : languages.filter(lang =>
-    lang.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
-};
-const getSuggestedValue = suggestion => suggestion.name;
-
-const renderSuggestion = suggestion => (
-  <div>
-    {suggestion.name}
-  </div>
-);
-
-class searchNews extends React.Component {
+export default class SourcesSearch extends React.Component {
   constructor() {
     super();
     this.state = {
-      value: '',
-      suggestions: []
+      sources: [],
+      search: ''
     };
   }
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    });
-  };
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(value)
-    });
-  };
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: []
-    });
-};
-render() {
-  const { value, suggestions } = this.state;
+  updateSearch(event) {
+    this.setState({ search: event.target.value });
 
-  const inputProps = {
-    placeholder: '',
-    value,
-    onChange: this.onChange
-  };
+  }
 
-  return (
-    <AutoSuggest
-      suggestions={suggestions}
-      onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-      onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-      getSuggestedValue={getSuggestedValue}
-      renderSuggestion={renderSuggestion}
-      inputProps={inputProps}
-    />
-  );
- }
+  // componentDidMount() {
+  //   axios.get(`https://newsapi.org/v1/sources?language=en`)
+  //     .then((result) => {
+  //       this.setState({
+  //         sources: result.data.sources
+  //       });
+  //     });
+  // }
+
+  render() {
+    let found = this.state.sources.filter(
+      (sources) => {
+        return sources.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+
+      });
+
+    return (
+      <div className="col-md-2" id="search" style={{textAlign: 'right'}}>
+
+        <input type="text" placeholder='Source Name' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#d9d9d9' }} className="searchbox" />
+
+        {found.map((sources) => {
+
+          return (
+            <div className="search" key={sources.id}>
+              <a href={sources.url}> {sources.name} </a>
+
+            </div>);
+
+        }
+        )}
+
+      </div>
+    );
+  }
 };
