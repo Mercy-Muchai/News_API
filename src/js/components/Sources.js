@@ -103,7 +103,7 @@ export default class Sources extends React.Component {
             </option>
           ))}
         </select>
-          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" style={{width: '256px', height: '1800px'}}>
+          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" style={{width: '256px', height: '1800px', backgroundColor: '#ff8f88', fontWeight: 'bold'}}>
           {sourcesToDisplay.map(source => {
             const url = "#/" + source.id + "/" + 'top'
             return (
