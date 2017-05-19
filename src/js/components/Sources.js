@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 const FILTERS = {
   language: {
-    au: 'au',
+    de: 'de',
     en: 'en',
     fr: 'fr'
   },
