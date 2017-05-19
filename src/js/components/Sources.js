@@ -36,7 +36,7 @@ export default class Sources extends React.Component {
     this.handleFilterChange = this.handleFilterChange.bind(this);
   }
   componentDidMount() {
-    this.filterArticles ()
+    this.filterArticles()
   }
   filterArticles() {
     const filterKey = this.state.currentFilter.filterKey
@@ -77,11 +77,11 @@ export default class Sources extends React.Component {
     });
 
     return (
-      <div style={{width: '256px'}}>
+      <div style={{ width: '256px' }}>
         <select
           className="form-control c-select mb-2"
           name="filterKey"
-          style={{textAlign: 'left'}}
+          style={{ textAlign: 'left' }}
           onChange={this.handleFilterChange}
           defaultValue={filterKey}
         >
@@ -103,19 +103,20 @@ export default class Sources extends React.Component {
             </option>
           ))}
         </select>
-          <div className="card col-xs-12 col-sm-6 col-md-3 m-2" id="sourceBar">
-          {sourcesToDisplay.map(source => {
-            const url = "#/" + source.id + "/" + 'top'
+        <div className="card col-xs-12 col-sm-6 col-md-3 m-2" classID="sourceBar">
+          {sourcesToDisplay.map((source) => {
+            const url = "#/" + source.id + "/" + source.sortBysAvailable[0]
             return (
             <div key={source.id}>
-              <div className="sources">
-                <p><a href={source.url} >{source.name}</a>{source.articles}</p>
-              </div>
+            <div className="sources">
+              <p><a href={url} >{source.name}</a>{source.articles}</p>
             </div>
+          </div>
           )
           })}
         </div>
-        </div>
+      </div>
     );
   }
 }
+

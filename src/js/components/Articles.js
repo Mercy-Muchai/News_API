@@ -5,8 +5,6 @@ export default class Articles extends Component {
   constructor() {
     super();
     this.state = {
-      sourceId: 'bbc-news',
-      sortBy: '',
       articles: [],
     }
   }
@@ -17,9 +15,8 @@ export default class Articles extends Component {
     if (sortBy) {
       url += `sortBy=${sortBy}&`;;
     }
-    url += 'apiKey=213327409d384371851777e7c7f78dfe';
-
-    Axios.get(url)
+    url += 'apiKey=213327409d384371851777e7c7f78dfe'
+      Axios.get(url)
       .then((result) => {
         console.log('getting result: ', result);
         this.setState({
@@ -28,18 +25,18 @@ export default class Articles extends Component {
       })
   }
   componentDidMount() {
-    this.sortArticles(this.state.sourceId, this.state.sortBy)
+    this.sortArticles(this.props.params.sourceId, this.props.params.sortBy)
   }
 
   componentWillReceiveProps(nextProps) {
     console.log('called')
-    this.sortArticles(this.nextProps.params.sourceId, this.nextProps.params.sortBy)
+    this.sortArticles(nextProps.params.sourceId, nextProps.params.sortBy)
   }
 
   render() {
     return (
-      <div className="row" style={{width: '100%'}}>
-        <h1 style={{width: '1054px', color: '#2d60c5', fontFamily: 'cursive', fontSize: '30px', paddingLeft: '350px'}}>Headlines</h1>
+      <div className="row" style={{ width: '100%' }}>
+        <h1 style={{ width: '1054px', color: '#2d60c5', fontFamily: 'cursive', fontSize: '30px', paddingLeft: '350px' }}>Headlines</h1>
         {console.log('This is the state', this.state)}
 
         <div className="row-fluid">

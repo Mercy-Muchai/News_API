@@ -14,7 +14,6 @@ export default class App extends React.Component {
         <Header />
         <Search />
         <Sources />
-        <Articles />
         {console.log('Children: ', this.props.children)}
         {this.props.children}
 
