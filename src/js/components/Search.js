@@ -32,7 +32,7 @@ export default class SourcesSearch extends React.Component {
       });
 
     return (
-      <div className="col-md-2" classID="search" style={{paddingLeft: '1150px'}}>
+      <div className="col-sm-12" classID="search" style={{paddingTop: "25px"}}>
 
         <input type="text" placeholder='Search Source' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#ffffff' }} className="searchbox" />
 
