@@ -8,7 +8,6 @@ export default class Logo extends React.Component {
           <div className="navbar-brand">
             <a className="header">
               <span style={{ display: "inline-block" }}>Get News
-                {/*<img src={require("/Users/mercymuchai/Desktop/CHECKPOINT 1/cp1/src/css/img/newsicon.png")} width="60" height="60" />*/}
               </span>
             </a>
           </div>

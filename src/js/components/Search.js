@@ -32,18 +32,17 @@ export default class SourcesSearch extends React.Component {
       });
 
     return (
-      <div className="col-sm-12" classID="search" style={{paddingTop: "25px"}}>
+      <div className="col-sm-12" classID="search" style={{ paddingTop: "25px" }}>
 
         <input type="text" placeholder='Search Source' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#ffffff' }} className="searchbox" />
-
+        <span id="tweet-container-index" style={{ paddingLeft: '1050px'}}>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url={'https://getnews-api.herokuapp.com/#/abc-news-au/top'} data-text={'Get News here from all over the world'}>Tweet</a>
+        </span>
         {found.map((sources) => {
-
           return (
             <div className="search" key={sources.id}>
               <a href={sources.url}> {sources.name} </a>
-
             </div>);
-
         }
         )}
 
