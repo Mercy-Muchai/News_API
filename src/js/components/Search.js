@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-export default class SourcesSearch extends React.Component {
+export default class Search extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -36,7 +36,7 @@ export default class SourcesSearch extends React.Component {
 
         <input type="text" placeholder='Search Source' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ backgroundColor: '#ffffff' }} className="searchbox" />
         <span id="tweet-container-index" style={{ paddingLeft: '1010px'}}>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url={'https://getnews-api.herokuapp.com/#/abc-news-au/top'} data-text={'Get News here from all over the world'}>Tweet</a>
+          <a href="https://twitter.com/share" className="twitter-share-button" data-url={'https://getnews-api.herokuapp.com/#/abc-news-au/top'} data-text={'Get News here from all over the world'}>Tweet</a>
         </span>
         {found.map((sources) => {
           return (
