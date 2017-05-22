@@ -14,14 +14,14 @@ User can:
 
 
 #### Installation
-git clone this repository
+    git clone this repository
 
-npm install
+    npm install
 
-run webpack/ npm start
+    run webpack/ npm start
 
 #### Testing
-To run tests, run jest
+To run tests run jest
 
 #### Deployed Version
 
