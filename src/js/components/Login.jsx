@@ -13,6 +13,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
+      <div>
       <GoogleLogin
         socialId="275754528132-f3f8gdkjnjsjc8efb5egkm4505ebid9g.apps.googleusercontent.com"
         class="btn btn-danger"
@@ -20,6 +21,7 @@ export default class Login extends React.Component {
         responseHandler={this.responseGoogle}
         buttonText="Login With G+"
       />
+      </div>
     );
   }
 

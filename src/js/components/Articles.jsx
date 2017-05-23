@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Axios from 'axios';
-import RenderHeadlines from './RenderHeadlines';
+import RenderHeadlines from './RenderHeadlines.jsx';
 
-export default class Articles extends Component {
+export default class Articles extends React.Component {
   constructor() {
     super();
     this.state = {

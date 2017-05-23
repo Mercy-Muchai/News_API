@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 export default class Search extends React.Component {
@@ -28,7 +27,6 @@ export default class Search extends React.Component {
     let found = this.state.sources.filter(
       (sources) => {
         return sources.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-
       });
 
     return (

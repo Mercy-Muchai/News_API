@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
-import Sources from './Sources';
-import Header from './Header';
-import Articles from './Articles';
-import Login from './Login';
-import Search from './Search';
-import RenderHeadlines from './RenderHeadlines';
+import Sources from './Sources.jsx';
+import Header from './Header.jsx';
+import Articles from './Articles.jsx';
+import Login from './Login.jsx';
+import Search from './Search.jsx';
+import RenderHeadlines from './RenderHeadlines.jsx';
 
 export default class App extends React.Component {
   constructor() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from './Login';
+import Login from './Login.jsx';
 
-export default class Logo extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
         <nav className="navbar navbar-default navbar-fixed-top">
