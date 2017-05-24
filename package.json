@@ -22,11 +22,14 @@
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
     },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
+    "testPathIgnorePatterns": [
+      "./__tests__/jestsetup.js"
     ]
   },
+  "moduleFileExtensions": [
+    "js",
+    "jsx"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
