@@ -12,9 +12,6 @@ describe('Test Search component', () => {
   it('expect to find the class', () => {
     expect(wrapper.node.props.className).toBe('col-sm-12');
   });
-  it('expect to find the class', () => {
-    expect(wrapper.node.props.classID).toBe('search');
-  });
   it('Should have a search button', () => {
     const homes = shallow(<Search />);
     const tree = shallowToJSON();

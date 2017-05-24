@@ -2,7 +2,6 @@ import expect from 'expect';
 import React from 'react';
 import { shallow, wrapper } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-// import Header from '../src/js/components/Header.jsx';
 import Sources from '../src/js/components/Sources.jsx';
 import Articles from '../src/js/components/Articles.jsx';
 import RenderHeadlines from '../src/js/components/RenderHeadlines.jsx';
