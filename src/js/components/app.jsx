@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import Sources from './Sources.jsx';
-import Header from './Header.jsx';
 import Articles from './Articles.jsx';
 import Login from './Login.jsx';
 import Search from './Search.jsx';
@@ -37,12 +36,22 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <nav className="navbar navbar-default navbar-fixed-top">
+          <div className="navbar-brand">
+            <a className="header">
+              <span style={{ display: "inline-block" }}>Get News
+              </span>
+            </a>
+          </div>
+          <ul className="nav navbar-nav pull-right">
+            <li className="active"><Login/></li>
+          </ul>
+        </nav>
         <Search />
         <Sources />
         {this.props.children ?
-        this.props.children:
-          <RenderHeadlines articles = {this.state.articles} />
+          this.props.children :
+          <RenderHeadlines articles={this.state.articles} />
         }
       </div>
     )

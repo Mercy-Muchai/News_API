@@ -34,7 +34,9 @@ export default class Articles extends React.Component {
 
   render() {
     return (
+      <div>
      <RenderHeadlines articles = {this.state.articles} />
+     </div>
     )
   }
 }
