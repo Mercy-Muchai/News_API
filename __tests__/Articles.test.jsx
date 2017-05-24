@@ -37,16 +37,3 @@ describe('Articles', () => {
     expect(articles.length).toBeLessThan(1);
   });
 });
-
-// describe('Articles', () => {
-//   it('the array should have atleast one article', () => {
-//     const wrapper = mount(
-//       <RenderHeadlines params={{ source_id: 'abc-news-au', sort_by: 'top' }} />,
-//     );
-//     wrapper.setState(mockArticles)
-//     wrapper.update();
-//     const articles = wrapper.find('col-sm-9')
-//     wrapper.find('col-sm-9');
-//     expect(articles.length).toBeLessThanOrEqual(1);
-//   });
-// });

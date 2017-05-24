@@ -107,7 +107,7 @@ export default class Sources extends React.Component {
             const url = "#/" + source.id + "/" + source.sortBysAvailable[0]
             return (
               <div key={source.id}>
-                <p><a href={url} >{source.name}</a>{source.articles}</p>
+                <p><a href={url}  style={{color: 'white'}} >{source.name}</a>{source.articles}</p>
               </div>
             )
           })}
@@ -117,4 +117,3 @@ export default class Sources extends React.Component {
     );
   }
 }
-

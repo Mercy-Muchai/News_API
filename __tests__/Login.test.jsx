@@ -9,6 +9,3 @@ describe('Test Header component', () => {
     expect(wrapper.node.type).toBe('div');
   });
 });
-
-
-

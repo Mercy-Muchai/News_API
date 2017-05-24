@@ -26,6 +26,3 @@ To run tests run jest
 #### Deployed Version
 
 View on: https://getnews-api.herokuapp.com/#/abc-news-au/top
-
-
-
