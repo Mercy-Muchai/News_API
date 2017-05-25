@@ -8,12 +8,13 @@ It makes use of JavaScript, React and test related resources like Jest and Enzym
 <img src="./src/getnews.png"/>
 
 ### Features
-User can:
-- Login to the application using Google+
-- Search through a list of sources
-- Select sources and view headlines based on sources
-- View top headlines of a selected News source
-- Click links to the original articles and be directed to them on a new tab
+Users can:
+
+    - Login to the application using Google+
+    - Search through a list of sources
+    - Select sources and view headlines based on sources
+    - View top headlines of a selected News source
+    - Click links to the original articles and be directed to them on a new tab
 
 
 ### Installation
@@ -24,8 +25,7 @@ User can:
     run webpack/ npm start
 
 ### Testing
-To run tests run jest
-
+    npm test/jest
 ### Deployed Version
 
 View on: https://getnews-api.herokuapp.com
