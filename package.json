@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "test": "jest -u",
     "test:watch": "jest --watch",
-    "test: coverage": "jest --coverage",
+    "coveralls": "./node_modules/.bin/coveralls  < coverage/lcov.info",
     "elint": "eslint . — ext .js — ext .jsx — cache || true",
     "elint:table": "eslint . — ext .js — ext .jsx — cache — format table || true",
     "elint:summary": "eslint . — ext .js — ext .jsx — cache — format ‘node_modules/eslint-friendly-formatter’ || true"
@@ -58,6 +58,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react-es2015": "^1.2.0",
     "babel-preset-stage-2": "^6.24.1",
+    "coveralls": "^2.13.1",
     "css-loader": "^0.28.1",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
