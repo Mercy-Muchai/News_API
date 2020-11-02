@@ -37,7 +37,7 @@
     "expect": "^26.0.1",
     "flux": "^3.1.2",
     "image-webpack-loader": "^6.0.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^5.0.0",
     "react": "^15.5.4",
     "react-autocomplete": "^1.5.3",
     "react-autosuggest": "^10.0.0",
