@@ -76,7 +76,7 @@
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^6.0.0",
     "jest": "^26.0.1",
-    "nock": "^12.0.0",
+    "nock": "^13.0.10",
     "path": "^0.12.7",
     "react-addons-test-utils": "^15.5.1",
     "react-search-input": "^0.11.2",
